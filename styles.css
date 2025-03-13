@@ -304,8 +304,10 @@ section {
     padding: 50px 20px;
     margin-top: 50px; /* Add margin to avoid overlap */
     background-color: #161616;
-    border: 2px solid #ffffff; /* Change border color on hover */
+    border: 2px solid #ffffff; /* Add border */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
+
     
     
 #SKILLS h2 {
@@ -336,7 +338,7 @@ section {
 #SKILLS:hover {
     background-color: #000000;
     color: #ffffff;
-    border: 2px solid #ffffff; /* Change border color on hover */
+    border: 2px solid #af5c18; /* Change border color on hover */
 }
 
 .project-content {
