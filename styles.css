@@ -313,6 +313,11 @@ section {
     margin-bottom: 20px;
 }
 
+#SKILLS h3{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
 #skills-list ul {
     list-style-type: none;
     padding: 0;
@@ -322,14 +327,14 @@ section {
     font-size: 24px;
     margin: 10px;
     padding: 10px;
-    background-color: #010c0f;
+    background-color: #242424;
     color: #ffffff;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 #SKILLS:hover {
-    background-color: #333333;
+    background-color: #000000;
     color: #ffffff;
 }
 
