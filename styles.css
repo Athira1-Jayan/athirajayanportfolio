@@ -550,8 +550,12 @@ section {
         font-size: 40px;
     }
 
-    .project-card {
-        padding: 15px;
+    .project-card h3 {
+        font-size: 20px;
+    }
+
+    .pdf-container iframe, .ppt-container iframe, .video-container video {
+        height: 300px;
     }
 
     .icon {
@@ -575,5 +579,59 @@ section {
     .nav-arrow {
         width: 40px;
         height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    .pdf-container iframe, .ppt-container iframe, .video-container video {
+        height: 200px;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .resume-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .navbar {
+        padding: 3px 5px;
+    }
+
+    .navbar a {
+        padding: 3px 5px;
+    }
+
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
     }
 }
