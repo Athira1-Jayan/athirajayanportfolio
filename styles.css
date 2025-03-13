@@ -526,68 +526,7 @@ section {
     margin-top: 20px; /* Add margin to avoid overlap */
 }
 
-/* Media queries for mobile view */
-@media (max-width: 768px) {
-    header {
-        padding: 100px 10px;
-    }
 
-    header h1 {
-        font-size: 60px;
-    }
-
-    header p {
-        font-size: 40px;
-    }
-
-    .btn {
-        font-size: 20px;
-        padding: 8px 16px;
-    }
-
-    .two-column {
-        column-count: 1;
-    }
-
-    section {
-        padding: 50px 10px;
-    }
-
-    section h2 {
-        font-size: 40px;
-    }
-
-    .project-card h3 {
-        font-size: 20px;
-    }
-
-    .pdf-container iframe, .ppt-container iframe, .video-container video {
-        height: 300px;
-    }
-
-    .icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .resume-btn {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .navbar {
-        padding: 5px 10px;
-    }
-
-    .navbar a {
-        padding: 5px 10px;
-    }
-
-    .nav-arrow {
-        width: 40px;
-        height: 40px;
-    }
-}
 
 
 
@@ -598,6 +537,7 @@ section {
         padding: 60px 10px; /* Reduce padding for mobile */
         height: 100vh; /* Ensure full viewport height */
         background-attachment: scroll; /* Prevent parallax effect */
+        font-family: 'Cascadia Code', Times, serif, sans-serif;
     }
 
     header h1 {
