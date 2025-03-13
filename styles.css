@@ -582,56 +582,173 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 80px 10px; /* Reduce padding */
+    }
+
     header h1 {
-        font-size: 40px;
+        font-size: 40px; /* Smaller font size */
     }
 
     header p {
-        font-size: 30px;
+        font-size: 30px; /* Smaller font size */
     }
 
+    /* Buttons */
     .btn {
-        font-size: 18px;
-        padding: 6px 12px;
+        font-size: 18px; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+        margin: 5px; /* Reduce margin */
     }
 
-    .pdf-container iframe, .ppt-container iframe, .video-container video {
-        height: 200px;
+    /* ABOUT Section */
+    .two-column {
+        column-count: 1; /* Single column layout */
+        font-size: 18px; /* Smaller font size */
+    }
+
+    /* SKILLS Section */
+    #SKILLS h2 {
+        font-size: 36px; /* Smaller heading size */
+    }
+
+    #skills-list li {
+        font-size: 18px; /* Smaller font size */
+        padding: 8px; /* Reduce padding */
+    }
+
+    /* PROJECTS Section */
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px; /* Reduce gap between cards */
     }
 
     .project-card h3 {
-        font-size: 18px;
+        font-size: 20px; /* Smaller font size */
     }
 
-    section h2 {
-        font-size: 30px;
+    .project-content {
+        margin-top: 10px; /* Reduce margin */
     }
 
-    .project-card {
-        padding: 10px;
+    .pdf-container iframe,
+    .ppt-container iframe,
+    .video-container video {
+        height: 300px; /* Reduce height for mobile */
     }
 
-    .icon {
-        width: 30px;
-        height: 30px;
+    .toggle-buttons button {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+
+    /* CONTACT Section */
+    .contact-icons {
+        flex-direction: column; /* Stack resume button and icons vertically */
+        gap: 10px; /* Reduce gap */
     }
 
     .resume-btn {
-        font-size: 14px;
-        padding: 8px 12px;
+        font-size: 16px; /* Smaller font size */
+        padding: 10px 15px; /* Smaller padding */
     }
 
-    .navbar {
-        padding: 3px 5px;
+    .icon {
+        width: 40px; /* Smaller icon size */
+        height: 40px;
     }
 
-    .navbar a {
-        padding: 3px 5px;
-    }
-
+    /* Navigation Arrows */
     .nav-arrow {
-        width: 30px;
+        width: 40px; /* Smaller size */
+        height: 40px;
+        bottom: 10px; /* Adjust position */
+        right: 10px;
+    }
+
+    .nav-arrow.up {
+        bottom: 60px; /* Adjust position */
+    }
+
+    /* Dropdowns */
+    .dropdown-content {
+        min-width: 120px; /* Smaller dropdown width */
+    }
+
+    .dropdown-content a {
+        padding: 8px 12px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 32px; /* Even smaller font size */
+    }
+
+    header p {
+        font-size: 24px; /* Even smaller font size */
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 16px; /* Smaller font size */
+        padding: 6px 12px; /* Smaller padding */
+    }
+
+    /* ABOUT Section */
+    .two-column {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    /* SKILLS Section */
+    #SKILLS h2 {
+        font-size: 30px; /* Smaller heading size */
+    }
+
+    #skills-list li {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    /* PROJECTS Section */
+    .project-card h3 {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .pdf-container iframe,
+    .ppt-container iframe,
+    .video-container video {
+        height: 200px; /* Reduce height for very small screens */
+    }
+
+    .toggle-buttons button {
+        font-size: 12px; /* Smaller font size */
+        padding: 6px 10px; /* Smaller padding */
+    }
+
+    /* CONTACT Section */
+    .resume-btn {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+
+    .icon {
+        width: 30px; /* Smaller icon size */
         height: 30px;
+    }
+
+    /* Navigation Arrows */
+    .nav-arrow {
+        width: 30px; /* Smaller size */
+        height: 30px;
+    }
+
+    .nav-arrow.up {
+        bottom: 50px; /* Adjust position */
     }
 }
