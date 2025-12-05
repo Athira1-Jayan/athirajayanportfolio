@@ -1,6 +1,6 @@
 /* Reset */
 body {
-    font-family: 'Cascadia Code', Times, serif, sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     margin: 0;
     padding: 0;
     background: #1e1e1e;
@@ -11,7 +11,7 @@ body {
 /* Header */
 header {
     padding: 150px 20px;
-    background-image: url("https://github.com/Athira1-Jayan/athirajayanportfolio/raw/main/Email-Open-mail-icon-Graphics-13342456-1.jpg");
+    background-image: url("portfolioo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -165,7 +165,6 @@ header p {
     font-size: 24px;
     line-height: 1.6;
     margin-bottom: 0;
-    font-family: 'Cascadia Code', Times, serif, sans-serif;
 }
 
 section p {
@@ -231,7 +230,6 @@ section h2 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-
 }
 
 .project-card {
@@ -239,7 +237,6 @@ section h2 {
     padding: 20px;
     border-radius: 15px;
     transition: transform 0.3s;
-    font-family: 'Cascadia Code', Times, serif, sans-serif;
 }
 
 /* Contact Section */
@@ -295,7 +292,6 @@ section h2 {
 section {
     padding: 50px 20px;
     padding-top: 100px;
-    font-family: 'Cooper Black', Times, serif, sans-serif;
 }
 
 
@@ -303,20 +299,10 @@ section {
 #SKILLS {
     padding: 50px 20px;
     margin-top: 50px; /* Add margin to avoid overlap */
-    background-color: #161616;
-    border: 2px solid #ffffff; /* Add border */
-    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
-    
-    
 #SKILLS h2 {
     font-size: 60px;
-    margin-bottom: 20px;
-}
-
-#SKILLS h3{
-    font-size: 35px;
     margin-bottom: 20px;
 }
 
@@ -329,16 +315,15 @@ section {
     font-size: 24px;
     margin: 10px;
     padding: 10px;
-    background-color: #242424;
+    background-color: #010c0f;
     color: #ffffff;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 #SKILLS:hover {
-    background-color: #000000;
+    background-color: #333333;
     color: #ffffff;
-    border: 2px solid #af5c18; /* Change border color on hover */
 }
 
 .project-content {
@@ -534,111 +519,119 @@ section {
     margin-top: 20px; /* Add margin to avoid overlap */
 }
 
-
-
-
-
-/* Mobile View (max-width: 768px) */
+/* Media queries for mobile view */
 @media (max-width: 768px) {
-    /* Header */
     header {
-        padding: 60px 10px; /* Reduce padding for mobile */
-        height: 100vh; /* Ensure full viewport height */
-        background-attachment: scroll; /* Prevent parallax effect */
-        font-family: 'Cascadia Code', Times, serif, sans-serif;
+        padding: 100px 10px;
     }
 
     header h1 {
-        font-size: 40px; /* Smaller font size for mobile */
+        font-size: 60px;
     }
 
     header p {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 40px;
     }
 
-    /* Buttons */
     .btn {
-        font-size: 16px; /* Smaller font size for mobile */
-        padding: 8px 16px; /* Smaller padding for mobile */
-        margin: 5px; /* Reduce margin for mobile */
+        font-size: 20px;
+        padding: 8px 16px;
     }
 
-    /* ABOUT Section */
     .two-column {
-        column-count: 1; /* Single column layout for mobile */
-        font-size: 18px; /* Smaller font size for mobile */
+        column-count: 1;
     }
 
-    /* SKILLS Section */
-    #SKILLS h2 {
-        font-size: 30px; /* Smaller heading size for mobile */
+    section {
+        padding: 50px 10px;
     }
 
-    #skills-list li {
-        font-size: 18px; /* Smaller font size for mobile */
-        padding: 8px; /* Reduce padding for mobile */
-    }
-
-    /* PROJECTS Section */
-    .projects-container {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
-        gap: 10px; /* Reduce gap between cards for mobile */
+    section h2 {
+        font-size: 40px;
     }
 
     .project-card h3 {
-        font-size: 20px; /* Smaller font size for mobile */
+        font-size: 20px;
     }
 
-    .project-content {
-        margin-top: 10px; /* Reduce margin for mobile */
-    }
-
-    .pdf-container iframe,
-    .ppt-container iframe,
-    .video-container video {
-        height: 200px; /* Reduce height for mobile */
-    }
-
-    .toggle-buttons button {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 12px; /* Smaller padding for mobile */
-    }
-
-    /* CONTACT Section */
-    .contact-icons {
-        flex-direction: column; /* Stack resume button and icons vertically */
-        gap: 10px; /* Reduce gap for mobile */
-    }
-
-    .resume-btn {
-        font-size: 16px; /* Smaller font size for mobile */
-        padding: 10px 15px; /* Smaller padding for mobile */
+    .pdf-container iframe, .ppt-container iframe, .video-container video {
+        height: 300px;
     }
 
     .icon {
-        width: 40px; /* Smaller icon size for mobile */
+        width: 40px;
         height: 40px;
     }
 
-    /* Navigation Arrows */
+    .resume-btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .navbar a {
+        padding: 5px 10px;
+    }
+
     .nav-arrow {
-        width: 40px; /* Smaller size for mobile */
+        width: 40px;
         height: 40px;
-        bottom: 10px; /* Adjust position for mobile */
-        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 40px;
     }
 
-    .nav-arrow.up {
-        bottom: 60px; /* Adjust position for mobile */
+    header p {
+        font-size: 30px;
     }
 
-    /* Dropdowns */
-    .dropdown-content {
-        min-width: 120px; /* Smaller dropdown width for mobile */
+    .btn {
+        font-size: 18px;
+        padding: 6px 12px;
     }
 
-    .dropdown-content a {
-        padding: 8px 12px; /* Smaller padding for mobile */
-        font-size: 14px; /* Smaller font size for mobile */
+    .pdf-container iframe, .ppt-container iframe, .video-container video {
+        height: 200px;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .resume-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .navbar {
+        padding: 3px 5px;
+    }
+
+    .navbar a {
+        padding: 3px 5px;
+    }
+
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
     }
 }
