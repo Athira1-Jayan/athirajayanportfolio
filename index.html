@@ -5,283 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Times New Roman', Times, serif, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #1e1e1e;
-            color: #ffffff;
-            text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-
-        header {
-            padding: 150px 20px;
-            background-image: url("portfolioo.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-
-        header h1 {
-            margin: 10px 0;
-            font-size: 110px;
-            font-weight: bold;
-            color: #ffffff;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-            font-family: 'Cascadia Code', Times, serif, sans-serif;
-            position: relative;
-            z-index: 2;
-        }
-
-        header p {
-            font-size: 85px;
-            font-weight: bold;
-            color: #ffffff;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            font-family: 'Cascadia Code', Times, serif, sans-serif;
-            position: relative;
-            z-index: 2;
-        }
-
-        .buttons {
-            margin-top: 40px;
-            transition: 0.3s ease-in-out;
-            position: relative;
-            z-index: 2;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            background: #ffffff;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-            font-size: 40px;
-            position: relative;
-            z-index: 2;
-            min-width: 100px; /* Make buttons touch-friendly */
-        }
-
-        .btn:hover {
-            background: #001b24;
-            color: #ffffff;
-        }
-
-        .two-column {
-            column-count: 2;
-            column-gap: 30px;
-            text-align: left;
-            font-size: 24px;
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
-
-        section {
-            padding: 100px 20px;
-        }
-
-        section h2 {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .project-card {
-            background: #1f1f1f;
-            padding: 20px;
-            border-radius: 15px;
-            transition: transform 0.3s;
-        }
-
-        .project-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .project-content {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .pdf-container iframe, .ppt-container iframe, .video-container video {
-            width: 100%;
-            height: 600px;
-            border: none;
-        }
-
-        .toggle-buttons {
-            margin-bottom: 20px;
-        }
-
-        .toggle-buttons button {
-            padding: 10px 20px;
-            margin: 5px;
-            background: #ffffff;
-            color: #000000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .toggle-buttons button:hover {
-            background: #001b24;
-            color: #ffffff;
-        }
-
-        .expand-button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .expand-button:hover {
-            background: #0056b3;
-        }
-
-        .nav-arrow {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #ffffff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.3s;
-            z-index: 1000;
-        }
-
-        .nav-arrow:hover {
-            background: #af5c18;
-        }
-
-        .nav-arrow.up {
-            bottom: 80px;
-        }
-
-        /* Dropdown Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #ffffff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 5px;
-            top: 100%;
-            left: 0;
-        }
-
-        .dropdown-content a {
-            color: #000000;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 60px; /* Smaller font size for tablets */
-            }
-
-            header p {
-                font-size: 40px; /* Smaller font size for tablets */
-            }
-
-            .btn {
-                font-size: 20px; /* Smaller button text for tablets */
-                padding: 8px 16px; /* Smaller padding for tablets */
-            }
-
-            .two-column {
-                column-count: 1; /* Single column layout for tablets */
-            }
-
-            section h2 {
-                font-size: 40px; /* Smaller heading size for tablets */
-            }
-
-            .project-card h3 {
-                font-size: 20px; /* Smaller project title for tablets */
-            }
-
-            .pdf-container iframe, .ppt-container iframe, .video-container video {
-                height: 300px; /* Smaller iframe/video height for tablets */
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 40px; /* Smaller font size for phones */
-            }
-
-            header p {
-                font-size: 30px; /* Smaller font size for phones */
-            }
-
-            .btn {
-                font-size: 18px; /* Smaller button text for phones */
-                padding: 6px 12px; /* Smaller padding for phones */
-            }
-
-            .pdf-container iframe, .ppt-container iframe, .video-container video {
-                height: 200px; /* Smaller iframe/video height for phones */
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;500;600;700&family=Times+New+Roman&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Your HTML content goes here -->
+    <!-- Header Section -->
     <header>
         <h1>Welcome to My Portfolio</h1>
         <p>Hi, I'm Athira P Jayan</p>
@@ -289,7 +18,6 @@
             <!-- ABOUT Button with Dropdown -->
             <div class="dropdown">
                 <a href="#ABOUT" class="btn">ABOUT</a>
-                <span class="dropdown-arrow">▼</span>
                 <div class="dropdown-content">
                     <a href="#resume-btn">My Resume</a>
                     <a href="#SKILLS" onclick="scrollToSection('SKILLS')">Skills</a>
@@ -300,6 +28,7 @@
         </div>
     </header>
 
+    <!-- ABOUT Section -->
     <section id="ABOUT">
         <h2>ABOUT ME</h2>
         <div class="two-column">
@@ -311,9 +40,10 @@
         </div>
     </section>
 
+    <!-- SKILLS Section -->
     <section id="SKILLS">
         <h2 onclick="toggleSkills()">SKILLS</h2>
-        <div id="skills-list" style="display: none;">
+        <div id="skills-list">
             <div class="skills-category">
                 <h3>TECHNICAL SKILLS</h3>
                 <ul>
@@ -344,9 +74,11 @@
         </div>
     </section>
 
+    <!-- PROJECTS Section -->
     <section id="PROJECTS">
         <h2>MY PROJECTS</h2>
         <div class="projects-container">
+            <!-- Project 1 -->
             <div class="project-card">
                 <h3 onclick="toggleProject('employee-attrition')">EMPLOYEE ATTRITION ANALYSIS IN TABLEAU</h3>
                 <div id="employee-attrition" class="project-content">
@@ -358,6 +90,7 @@
                     <div class="video-container">
                         <video controls width="100%">
                             <source src="https://github.com/Athira1-Jayan/athirajayanportfolio/raw/main/Employee%20Attrition%20Rate%20Analayis.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="ppt-container">
@@ -365,11 +98,13 @@
                         <button class="expand-button" onclick="expandIframe('ppt-iframe-1')">Expand to Full Screen</button>
                     </div>
                     <div class="pdf-container">
-                        <iframe id="pdf-iframe-1" src="https://drive.google.com/file/d/1tyiHBzF76JDG6t1i-t73MCAh751Hse6Y/preview" width="100%" height="600px" frameborder="0"></iframe>
+                        <iframe id="pdf-iframe-1" src="https://drive.google.com/file/d/1tyiHBzF76JDG6t1i-t73MCAh751Hse6Y/preview" frameborder="0"></iframe>
                         <button class="expand-button" onclick="expandIframe('pdf-iframe-1')">Expand to Full Screen</button>
                     </div>
                 </div>
             </div>
+
+            <!-- Project 2 -->
             <div class="project-card">
                 <h3 onclick="toggleProject('ecommerce-sales')">E-COMMERCE SALES AND CUSTOMER INSIGHTS IN EXCEL</h3>
                 <div id="ecommerce-sales" class="project-content">
@@ -381,10 +116,11 @@
                     <div class="video-container">
                         <video controls width="100%">
                             <source src="https://github.com/Athira1-Jayan/athirajayanportfolio/raw/main/ECCOMMERCE%20SALES%20AND%20CUSTOMER%20INSIGHT.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="ppt-container">
-                        <iframe id="ppt-iframe-2" src="https://drive.google.com/file/d/1B7F3lXCEP49ASNYsYVD6KzCxT73d9hy7/preview" width="100%" height="600px" frameborder="0"></iframe>
+                        <iframe id="ppt-iframe-2" src="https://drive.google.com/file/d/1B7F3lXCEP49ASNYsYVD6KzCxT73d9hy7/preview" frameborder="0"></iframe>
                         <button class="expand-button" onclick="expandIframe('ppt-iframe-2')">Expand to Full Screen</button>
                     </div>
                     <div class="pdf-container">
@@ -393,6 +129,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Project 3 -->
             <div class="project-card">
                 <h3 onclick="toggleProject('google-playstore')">GOOGLE PLAYSTORE APPS ANALYSIS IN POWER BI</h3>
                 <div id="google-playstore" class="project-content">
@@ -404,6 +142,7 @@
                     <div class="video-container">
                         <video controls width="100%">
                             <source src="https://github.com/Athira1-Jayan/athirajayanportfolio/raw/main/GOOGLE%20PLAYSTORE.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="ppt-container">
@@ -419,16 +158,17 @@
         </div>
     </section>
 
+    <!-- CONTACT Section -->
     <section id="CONTACT">
         <h2>CONTACT ME</h2>
-        <p>Feel free to reach out to me or download my resume:</p>
+        <p class="contact-subtitle">Feel free to reach out to me or download my resume:</p>
         <div class="contact-icons">
             <a href="https://drive.google.com/file/d/18rvGGynkmgXu2hzVgF7jB_wAi-XYzcPJ/view?usp=drive_link" class="resume-btn" id="resume-btn" target="_blank">My Resume</a>
             <a href="mailto:athirajayanapj@email.com">
-                <img src="https://github.com/Athira1-Jayan/athirajayanportfolio/raw/main/Email-Open-mail-icon-Graphics-13342456-1.jpg" class="icon">
+                <img src="https://github.com/Athira1-Jayan/athirajayanportfolio/raw/main/Email-Open-mail-icon-Graphics-13342456-1.jpg" class="icon" alt="Email">
             </a>
             <a href="https://www.linkedin.com/in/athira-jayan-3443b9260" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="icon" alt="LinkedIn">
             </a>
         </div>
     </section>
@@ -437,139 +177,6 @@
     <button class="nav-arrow up" onclick="scrollToTop()">&#9650;</button>
     <button class="nav-arrow down" onclick="scrollToBottom()">&#9660;</button>
 
-    <script>
-        function toggleSkills() {
-            var skillsList = document.getElementById("skills-list");
-            skillsList.style.display = skillsList.style.display === "none" ? "block" : "none";
-        }
-
-        function toggleProject(projectId) {
-            var allProjectContents = document.querySelectorAll(".project-content");
-            allProjectContents.forEach(function(content) {
-                if (content.id !== projectId) {
-                    content.style.display = "none";
-                }
-            });
-
-            var projectContent = document.getElementById(projectId);
-            if (projectContent.style.display === "none" || projectContent.style.display === "") {
-                projectContent.style.display = "block";
-            } else {
-                projectContent.style.display = "none";
-            }
-        }
-
-        function showVideo(projectId) {
-            var projectContent = document.getElementById(projectId);
-            var pdfContainer = projectContent.querySelector(".pdf-container");
-            var pptContainer = projectContent.querySelector(".ppt-container");
-            var videoContainer = projectContent.querySelector(".video-container");
-
-            pdfContainer.style.display = "none";
-            pptContainer.style.display = "none";
-            videoContainer.style.display = "block";
-        }
-
-        function showPDF(projectId) {
-            var projectContent = document.getElementById(projectId);
-            var pdfContainer = projectContent.querySelector(".pdf-container");
-            var pptContainer = projectContent.querySelector(".ppt-container");
-            var videoContainer = projectContent.querySelector(".video-container");
-
-            pdfContainer.style.display = "block";
-            pptContainer.style.display = "none";
-            videoContainer.style.display = "none";
-        }
-
-        function showPPT(projectId) {
-            var projectContent = document.getElementById(projectId);
-            var pdfContainer = projectContent.querySelector(".pdf-container");
-            var pptContainer = projectContent.querySelector(".ppt-container");
-            var videoContainer = projectContent.querySelector(".video-container");
-
-            pdfContainer.style.display = "none";
-            pptContainer.style.display = "block";
-            videoContainer.style.display = "none";
-        }
-
-        function expandIframe(iframeId) {
-            const iframe = document.getElementById(iframeId);
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.mozRequestFullScreen) { // Firefox
-                iframe.mozRequestFullScreen();
-            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.msRequestFullscreen) { // IE/Edge
-                iframe.msRequestFullscreen();
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function scrollToBottom() {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        }
-
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            const offset = 100; // Adjust this value as needed
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const sectionRect = section.getBoundingClientRect().top;
-            const sectionPosition = sectionRect - bodyRect;
-            const offsetPosition = sectionPosition - offset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-
-        // Disable right-click
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-
-        // Disable text selection
-        document.addEventListener('selectstart', function (e) {
-            e.preventDefault();
-        });
-
-        // Disable drag-and-drop
-        document.addEventListener('dragstart', function (e) {
-            e.preventDefault();
-        });
-
-        window.addEventListener("scroll", function () {
-            let buttons = document.getElementById("sticky-buttons");
-            if (window.scrollY > 100) {
-                buttons.classList.add("fixed");
-            } else {
-                buttons.classList.remove("fixed");
-            }
-        });
-
-        // Add click event listeners to dropdown arrows
-        document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
-            arrow.addEventListener('click', (event) => {
-                event.stopPropagation(); // Prevent the click from affecting the button
-                const dropdownContent = arrow.nextElementSibling;
-                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-                arrow.classList.toggle('active'); // Rotate the arrow
-            });
-        });
-
-        // Close dropdowns when clicking outside
-        window.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-content').forEach(content => {
-                content.style.display = 'none';
-            });
-            document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
-                arrow.classList.remove('active'); // Reset arrow rotation
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
